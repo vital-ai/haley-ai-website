@@ -7,14 +7,14 @@ var ENDPOINT = 'endpoint.' + APP_ID;
 
 var vitalservice = null;
 
-var EVENTBUS_URL ='https://console.vital.ai/eventbus';
+var EVENTBUS_URL ='https://demos.vital.ai/commerce/eventbus';
 
 if(window.location.hostname.startsWith('dev.')) {
 
-	APP_ID = 'commerce';
+	APP_ID = 'commerce2';
 	ENDPOINT = 'endpoint.' + APP_ID;
 	
-	EVENTBUS_URL = 'http://dev.vital-console.vital.ai/eventbus';
+	EVENTBUS_URL = 'http://dev.commerce.vital.ai/commerce/eventbus';
 	
 }
 
@@ -47,7 +47,7 @@ function mailing_signup(email, successCallback, errorCallback) {
 	
 	console.log('signing up, email', email)
 	
-	vitalservice.callFunction('haley.mailing.signup', {email: email}, function(result) {
+	vitalservice.callFunction('mailing.haley.signup', {email: email}, function(result) {
 		
 		console.log('haley.mailing.signup result: ', result)
 		
