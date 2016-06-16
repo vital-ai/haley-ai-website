@@ -1,6 +1,6 @@
 //global variable
 
-var APP_ID = 'commerce';
+var APP_ID = 'haley';
 
 var ENDPOINT = 'endpoint.' + APP_ID;
 
