@@ -7,14 +7,14 @@ var ENDPOINT = 'endpoint.' + APP_ID;
 
 var vitalservice = null;
 
-var EVENTBUS_URL ='https://demos.vital.ai/commerce/eventbus';
+var EVENTBUS_URL ='https://haley.vital.ai/eventbus';
 
 if(window.location.hostname.startsWith('dev.')) {
 
-	APP_ID = 'commerce2';
+	APP_ID = 'haley';
 	ENDPOINT = 'endpoint.' + APP_ID;
 	
-	EVENTBUS_URL = 'http://dev.commerce.vital.ai/commerce/eventbus';
+	EVENTBUS_URL = 'http://dev.haley.vital.ai/eventbus';
 	
 }
 
