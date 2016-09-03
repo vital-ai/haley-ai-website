@@ -1,73 +1,84 @@
-//var eb = new vertx.EventBus(window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + '/eventbus');
-//https://dashboard.vital.ai/eventbus
+//global variable
 
-var hostPort = 'dashboard.vital.ai';
+var APP_ID = 'haley';
 
-var protocol = 'https';
+var ENDPOINT = 'endpoint.' + APP_ID;
 
-if( window.location.hostname.indexOf('dev.') == 0) {
-  //development URL
-  hostPort = 'localhost:8080';
-  protocol = 'http';
+
+var vitalservice = null;
+
+var EVENTBUS_URL ='https://haley.vital.ai/eventbus';
+
+if(window.location.hostname.startsWith('dev.')) {
+
+	APP_ID = 'haley';
+	ENDPOINT = 'endpoint.' + APP_ID;
+	
+	EVENTBUS_URL = 'http://dev.haley.vital.ai/eventbus';
+	
 }
 
-var eburl = protocol + '://' + hostPort + '/eventbus';
 
-console.log("EventBus URL:", eburl); 
 
-var eb = new vertx.EventBus(eburl);
-
-eb.onopen = function() {
+$(function(){
 	
-	console.log("Event bus connected");
+	console.log("instantiating service...");
 	
+	vitalservice = new VitalService(ENDPOINT, EVENTBUS_URL, function(){
+		
+		console.log('connected to endpoint');
+	
+		onVitalServiceReady();
+			
+	}, function(err){
+		console.error('couldn\'t connect to endpoint -' + err);
+	});
+	
+});
+
+
+
+var onVitalServiceReady = function() {
+
 };
+
 
 function mailing_signup(email, successCallback, errorCallback) {
 	
 	console.log('signing up, email', email)
 	
-	eb.send('haley.mailing.signup', {email: email}, function(result) {
+	vitalservice.callFunction('mailing.haley.signup', {email: email}, function(result) {
 		
 		console.log('haley.mailing.signup result: ', result)
 		
-		if(result.status == 'ok') {
+		successCallback(result.status.message);
+		
+	}, function(error) {
+		
+		var status = 'error_unknown';
+		
+		var msg = 'no error message';
+		
+		if(error.indexOf('error_') == 0) {
 			
-			successCallback(result.message)
+			var split = error.split(/\s+/);
+			
+			status = split[0]
+			
+			if(split.length > 1) {
+				split.splice(0, 1);
+				msg = split.join(' ');
+			}
 			
 		} else {
-			
-			errorCallback(result.status, result.message)
-			
+			msg = error;
 		}
+		
+		errorCallback(status, msg);
 		
 	});
 	
 }
-
-/*
-function mailing_remove(email, code, successCallback, errorCallback) {
-	
-	console.log('remove, email', email)
-	
-	eb.send('haley.mailing.remove', {email: email, code: code}, function(result) {
-		
-		console.log('haley.mailing.remove result: ', result)
-		
-		if(result.status == 'ok') {
-			
-			successCallback(result.message)
-			
-		} else {
-			
-			errorCallback(result.status, result.message)
-			
-		}
-		
-	});
-	
-}
-*/
 
 //UI PART
 $(function(){
