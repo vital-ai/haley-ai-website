@@ -3370,7 +3370,7 @@ section * {
 
 
 .header-11-sub .background, .header-1-sub .background {
-  background-image: url("../../../common-files/img/girl-1573458.jpg");
+  background-image: url("../../../common-files/img/girl-compressed.jpg");
   opacity: 60;
   filter: alpha(opacity=6000);
   opacity: 0.60;
@@ -3384,7 +3384,7 @@ section * {
 
 @media (max-width: 767px) {
   .header-11-sub .background, ..header-1-sub .background {
-    background-image: url("../../../common-files/img/girl-1573458.jpg");
+    background-image: url("../../../common-files/img/girl-compressed.jpg");
   }
 }
 
