@@ -1,13 +1,13 @@
 //global variable
 
-var APP_ID = 'haley';
+var APP_ID = 'haley-dev';
 
 var ENDPOINT = 'endpoint.' + APP_ID;
 
 
 var vitalservice = null;
 
-var EVENTBUS_URL ='https://haley.vital.ai/eventbus';
+var EVENTBUS_URL ='https://haley-ai-login.vital.ai/eventbus';
 
 if(window.location.hostname.startsWith('dev.')) {
 
@@ -19,6 +19,7 @@ if(window.location.hostname.startsWith('dev.')) {
 }
 
 
+console.log('evenbus url: ', EVENTBUS_URL);
 
 $(function(){
 	
