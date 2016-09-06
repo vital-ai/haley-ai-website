@@ -1,0 +1,242 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Haley A.I. Device</title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+         <link rel="shortcut icon" href="img/haley_favicon.ico">
+
+        <link rel="stylesheet" href="flat-ui/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="flat-ui/css/flat-ui.css">
+        <!-- Using only with Flat-UI (free)-->
+        <link rel="stylesheet" href="common-files/css/icon-font.css">
+        <!-- end -->
+        <link rel="stylesheet" href="common-files/css/animations.css">
+        
+        <!-- If you don't use any of these blocks just remove unnecessary CSS files -->
+        <!-- blog -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-blog/css/style.css">
+        <!-- contacts -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-contacts/css/style.css">
+        <!-- content -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-content/css/style.css">
+        <!-- crew -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-crew/css/style.css">
+        <!-- footer -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-footer/css/style.css">
+        <!-- header -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-header/css/style.css">
+        <!-- price -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-price/css/style.css">
+        <!-- projects -->
+        <link rel="stylesheet" href="ui-kit/ui-kit-projects/css/style.css">
+
+        <link rel="stylesheet" href="css/style.css">
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83604156-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+
+    <body>
+        
+        <div class="page-wrapper">   
+            
+    <script src="https:////code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+<script type='text/javascript' src='js/templates.js'></script> 
+
+        <a name="home"></a>
+            
+
+       <div class="content-placeholder-1"></div>
+    
+<script id="header">
+
+var theheader = JST['templates/header.hbs'];
+    
+
+var context={
+    vitalSiteURL: 'http://www.vital.ai',
+    consoleURL: 'https://console.vital.ai'
+};
+    
+  // Pass our data to the template
+  var theCompiledHtml = theheader(context);
+    
+
+  // Add the compiled html to the page
+  var cp1 = $('.content-placeholder-1')
+  cp1.html(theCompiledHtml);
+  cp1.find('.logged-out-visible , .logged-in-visible').hide();
+
+  
+  
+</script>            
+            
+
+        <section class="header-1-sub" style="height: 0px; overflow: hidden;">
+           
+            <div id="pt-main" class="page-transitions pt-perspective">
+            </div>
+           
+        </section>
+        
+        <!-- fake section displayed underneath the floating nav bar when scroll-y=0 -->
+        <section style="height: 76px; overflow: hidden; background-color: rgb(54, 57, 64);">
+        </section>
+        
+            
+  <section class="content-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10">
+                <h3>Embedding Haley A.I. in Devices</h3>
+                <p>The Haley software infrasture may be used to support embedded devices.  Communication with the Haley service occurs over the Websocket standard - if a device can access the Internet, it can communicate with Haley.  Haley uses the AIMP (Artificial Intelligence Messaging Protocol) standard, which may be extended to support device specific messages.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>            
+
+
+    
+  
+<section class="content-3">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 aligment">
+                    <h3>Haley A.I. Raspberry Pi Embedded Device</h3>
+                    <p>Sample code is available for a Haley client and user interface on the Raspberry Pi device.  This is implemented using the JVM client and local webapp server, using a local browser for user interface (such as Chromium or Iceweasel).  The Raspberry Pi is used as a Home Automation server.  The server discovers local Internet-of-Things devices and can accept authenticated and authorized commands from the Haley service to get their status or operate them.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="img">
+                        <img src="common-files/img/raspberrypi.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="delimiter">&nbsp;</div>
+        <div class="container">
+            <div class="row features">
+                <div class="col-sm-3">
+                    <h6>AIMP Message Exchange</h6>
+                    <p>AIMP (Artificial Intelligence Message Protocol) provides an extensible standard for securely exchanging messages suitbale for human-to-bot, bot-to-device, or bot-to-bot communication.  The Haley API's utilize AIMP for message exchange.  Haley API Bot's produce and consume AIMP messages.</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h6>Home Automation</h6>
+                    <p>Based on the open AIMP standard, Haley can be extended to support any Internet-of-Things device.  Haley can use AIMP to control any such device, report on its status, and enable securely sharing access to devices on Haley channels.</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h6>Business & Industrial Automation</h6>
+                    <p>AIMP may be extended for any network-enabled device, and a corresponding Bot implemented to support it.  As AIMP can support additional security protocols for command validation, it's a good fit for the Enterprise.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>           
+          
+<section class="content-3">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 aligment">
+                    <h3>Haley A.I. Home Device</h3>
+                    <p>Based on the Raspberry Pi, 7" Touchscreen, and assorted components such as a speaker and microphone, an A.I. assistant and Home Automation device can be assembled.  Here's a screenshot of the Haley Web UI displayed on the touchscreen fullscreen, with an addition device panel above to turn on/off a local device. 
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="img">
+                        <img style="border:2px solid gray" src="common-files/img/haley-device-screenshot.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>             
+
+    
+<div class="content-placeholder-10"></div>
+    
+<script id="footer">
+
+var thefooter = JST['templates/footer.hbs'];
+    
+
+var context={
+    vitalSiteURL: 'http://www.vital.ai',
+    consoleURL: 'https://console.vital.ai'
+};
+ 
+           
+    
+  // Pass our data to the template
+  var theCompiledHtml = thefooter(context);
+    
+
+  // Add the compiled html to the page
+  $('.content-placeholder-10').html(theCompiledHtml);
+
+</script>  
+
+        </div>
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="common-files/js/jquery-1.10.2.min.js"></script>
+        <script src="flat-ui/js/bootstrap.min.js"></script>
+        <script src="common-files/js/modernizr.custom.js"></script>
+        <script src="common-files/js/page-transitions.js"></script>
+        <script src="common-files/js/startup-kit.js"></script>
+
+
+		<!-- vitalservice -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
+		<script src="/js/vitalservice/jquery.cookie-1.4.0.js" type="text/javascript"></script>
+		<script src="/js/vitalservice/tv4.min.js" type="text/javascript"></script>
+		<script src="/js/vitalservice/vertxbus-2.1.js" type="text/javascript"></script>
+		<script src="/js/vitalservice/vital-core-0.2.303.js" type="text/javascript"></script>
+		<script src="/js/vitalservice/vital-0.2.303.js" type="text/javascript"></script>
+		<script src="/js/vitalservice/vital-generic-app-0.2.303.js" type="text/javascript"></script>
+		
+		<script src="/js/vitalservice/vitalservice-0.2.303.js" type="text/javascript"></script>
+		<script src="/js/vitalservice/vitalservice-impl-0.2.303.js" type="text/javascript"></script>
+		<script src="/js/vitalservice/vitalservice-json-0.2.303.js" type="text/javascript"></script>
+		<script src="/js/eventbus.js" type="text/javascript"></script>
+
+
+        <!-- autoslider -->
+        <script src="js/auto-slider.js" type="text/javascript"></script>
+
+        <!-- collapse the navbar -->
+        <script>
+          $(function(){
+            //deferred headre collapsing
+            setTimeout(function(){
+              $(window).trigger('collapse-header-1');
+              $(".navbar.col-sm-12.navbar-fixed-top").show();
+            }, 100);
+          });
+        </script>        
+        
+        <!-- autoslider -->
+        <!--<script src="js/auto-slider.js" type="text/javascript"></script>-->
+        
+
+
+    </body>
+</html>

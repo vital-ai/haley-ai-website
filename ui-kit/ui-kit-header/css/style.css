@@ -887,7 +887,7 @@ section * {
 .header-1 .navbar .nav > li > a:hover,
 .header-1 .navbar .nav > li > a:focus,
 .header-1 .navbar .nav > li > a.active {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(190, 216, 243, 0.8);
 }
 .header-1 .navbar .nav > li.active > a {
   color: rgba(0, 0, 0, 0.4);
@@ -3366,18 +3366,31 @@ section * {
 .header-11-sub .additional-links a.active {
   color: #16191c;
 }
+
+
+
 .header-11-sub .background, .header-1-sub .background {
-  background-image: url("../../../common-files/img/haley_background.jpg");
-  opacity: 75;
-  filter: alpha(opacity=7500);
-  opacity: 0.75;
-  filter: alpha(opacity=75);
+  background-image: url("../../../common-files/img/girl-1573458.jpg");
+  opacity: 60;
+  filter: alpha(opacity=6000);
+  opacity: 0.60;
+  filter: alpha(opacity=60);
 }
+
+
+
+
+
+
 @media (max-width: 767px) {
   .header-11-sub .background, ..header-1-sub .background {
-    background-image: url("../../../common-files/img/haley_background.jpg");
+    background-image: url("../../../common-files/img/girl-1573458.jpg");
   }
 }
+
+
+
+
 @media (max-width: 767px) {
   .header-11-sub {
     padding-top: 150px;

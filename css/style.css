@@ -87,6 +87,18 @@ vertical-align: bottom;
 */
 
 
+.blog-content {
+    margin-top: -25%;
+    
+    
+    /*
+    vertical-align: top;
+    border: 10px black solid;
+    display: inline-block;
+    float: none;
+    */
+}
+
 
 
 

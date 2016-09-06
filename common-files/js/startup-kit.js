@@ -888,6 +888,7 @@ startupKit.uiKitContent.content24 = function() {
 
 };
 /* Content 25*/
+/*
 startupKit.uiKitContent.content25 = function() {
 
     if ((!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) || (window.mobile)) {
@@ -928,6 +929,10 @@ startupKit.uiKitContent.content25 = function() {
     })($('.content-25 .col-sm-6 + .col-sm-6'));
 
 };
+*/
+
+
+
 /* Content 26*/
 startupKit.uiKitContent.content26 = function() {};
 
