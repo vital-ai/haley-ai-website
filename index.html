@@ -700,6 +700,12 @@ New York, NY 10006</p>
     <script src="common-files/js/froogaloop.min.js"></script>
     <script src="common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script src="common-files/js/startup-kit.js"></script>
+  
+  	<script type="text/javascript">
+	    $('.map').click(function () {
+	        $(this).find('iframe').css("pointer-events", "auto");
+	    });
+  	</script>
     
 		<!-- vitalservice -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
