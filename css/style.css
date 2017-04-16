@@ -138,3 +138,6 @@ vertical-align: bottom;
 }
 
 
+.map iframe {
+  pointer-events: none;
+}
