@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Haley A.I. Developers</title>
+        <title>Haley A.I. as a Service</title>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -104,89 +104,16 @@ var context={
     <div class="container">
         <div class="row">
             <div class="col-sm-10">
-                <h3>Haley A.I. Developers</h3>
+                <h3>Haley A.I. as a Service</h3>
                 <p>
-                    Developers interact with Haley through a variety of programming interfaces.  The Designer enables creating dialogs via a drag-and-drop interface.  Client APIs allow interacting with the Haley service from applications.  The Bot API allows implementing Bots to interact with Haley users, services, and devices.  The Bot API includes components to interact with databases, the dialog system, machine learning and predictive models, analytics, external web services, and other Bots.
-                    <br>
-                    <br>
-                    
-                    Bot API:  <a target=_blank href=https://github.com/vital-ai/haley-bot-api><font color="#46a5e4">https://github.com/vital-ai/haley-bot-api</font></a><br>
-                    Client JVM (Groovy/Java) API:  <a target=_blank href=https://github.com/vital-ai/haley-client-groovy><font color="#46a5e4">https://github.com/vital-ai/haley-client-groovy</font></a><br>
-                    Client JavaScript API:  <a target=_blank href=https://github.com/vital-ai/haley-client-js><font color="#46a5e4">https://github.com/vital-ai/haley-client-js</font></a><br>
-                         
+                    Haley AI-as-a-Service provides the operational infrastructure for your Haley implementation, in a pay per usage model.  The usage is determined by the number and complexity of actions Haley performs for your business.  This is a combination of the number of messages processed and generated, the amount of data, the number of predictive models, and frequency of data processing for training predictive models.  As part of our Early Access release of Haley AI-as-a-Service, we provide pricing for your implementation after understanding your requirements.  Please contact us to set up a requirements discussion and receive a quote.
                 </p>
             </div>
         </div>
     </div>
 </section>            
 
-<section class="content-6 v-center">
-    <div>
-        <div class="container">
-             <h3>Haley Programming Interfaces</h3>
-           
-            <div class="row features">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h6>Client API</h6>
-                    <p>The Haley Client API primarily consists of sending and receiving AIMP messages to Haley.  The Client API includes authentication methods, and methods for listing channels and participants - users and devices.  There are currently JavaScript and Java Client implementations.</p>
-                </div>
-                <div class="col-sm-4 col-sm-offset-1">
-                    <h6>Haley Bot API</h6>
-                    <p>The Bot API provides ways to process incoming and generate new messages.  Haley provides access to databases, scripts, prediction models and other services via the Bot API, all of which can be used in message handling. The Bot API provides access to the Dialog System to track the state of the dialog in a channel./p>
-                </div>
-            </div>
-            <div class="row features">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h6>AIMP Messages</h6>
-                    <p>AIMP provides a standard for defining messages to be exchanged across A.I. systems.  AIMP messages may include payload data, such as a weather report message containing the weather data.</p>
-                </div>
-                <div class="col-sm-4 col-sm-offset-1">
-                    <h6>Dialog System</h6>
-                    <p>The Dialog System is part of the Bot API.  The Dialog Systems tracks the state of the dialog with each Haley channel and user.  As example, for the message "Send that in an email to John", the Dialog System tracks the history of messages to determine what "that" refers to.</p>
-                </div>
-            </div>
-            
-            
-            <div class="row features">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <h6>Haley Console</h6>
-                    <p>Haley Console is a development tool to run Bots through tests or via interactive command line interface.</p>
-                </div>
-                <div class="col-sm-4 col-sm-offset-1">
-                    <h6>Queries, DataScripts, Predictive Models</h6>
-                    <p>The Bot API makes available services including: a query interface to query databases, an interface to execute scripts on external servers (used to access remote webservices), and an interface to get recommendations and predictions from predictive models.  Many machine learning algorithms are available for building the predictive models - including those from MLlib on Apache Spark.</p>
-                </div>
-            </div>
-            
-            
-        </div>
-    </div>
-</section>            
-            
-    
-  
-<section class="content-3">
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 aligment">
-                    <h3>Haley User Interfaces and Information Cards</h3>
-                    <p>Haley messaging occurs on a "channel" with participant users and devices.  It's natural to visualize this as a chat stream, similar to Twitter or Slack.  However, through the Haley dialog system, the messages exchanged could follow additional structure, such as an exchange of forms with values filled in.  Thus, a user interface may provide a very unstructured messaging system or a very structured one, depending on the needs of the application.  Many messages are "invisible" such as heartbeat messages providing device status or user presense.</p>
-                    <p>An example of a user interface is in the screenshot to the right.  The example displays an unstructured chat, with Haley providing a structured response to the request "show me the weather".  The weather report is a "payload" in an AIMP message, providing the next few days weather predictions.  This information is displayed in a "weather card" locally.  The cards are determined by the "client" -- so different interfaces may display the information contained within an AIMP message differently.  As example, for an integrated device like the Amazon Echo, replies are always spoken through the speaker, whereas in a web interface, they can be visually displayed.
-                    </p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="img">
-                        <img src="common-files/img/haley-screenshot.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</section>           
-  
-
+      
     
 <div class="content-placeholder-10"></div>
     

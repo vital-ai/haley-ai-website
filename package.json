@@ -1,5 +1,5 @@
 {
-  "name": "vital-ai-webapp",
+  "name": "haley-ai-webapp",
   "version": "0.1.0",
   "devDependencies": {
     "connect-modrewrite": "^0.9.0",
