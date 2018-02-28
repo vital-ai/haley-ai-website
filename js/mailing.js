@@ -1,82 +1,42 @@
-//global variable
-
-var APP_ID = 'haley-dev';
-
-var ENDPOINT = 'endpoint.' + APP_ID;
-
-
-var vitalservice = null;
-
-var EVENTBUS_URL ='https://haley-ai-login.vital.ai/eventbus';
-
-if(window.location.hostname.startsWith('dev.')) {
-
-	APP_ID = 'haley';
-	ENDPOINT = 'endpoint.' + APP_ID;
-	
-	EVENTBUS_URL = 'http://dev.haley.vital.ai/eventbus';
-	
-}
-
-
-console.log('evenbus url: ', EVENTBUS_URL);
-
-$(function(){
-	
-	console.log("instantiating service...");
-	
-	vitalservice = new VitalService(ENDPOINT, EVENTBUS_URL, function(){
-		
-		console.log('connected to endpoint');
-	
-		onVitalServiceReady();
-			
-	}, function(err){
-		console.error('couldn\'t connect to endpoint -' + err);
-	});
-	
-});
-
-
-
-var onVitalServiceReady = function() {
-
-};
-
 
 function mailing_signup(email, successCallback, errorCallback) {
-	
 	console.log('signing up, email', email)
+	_mailing_action('signup', email, successCallback, errorCallback);
+}
+
+function mailing_remove(email, successCallback, errorCallback) {
+	console.log('remove, email', email)
+	_mailing_action('remove', email, successCallback, errorCallback);
+}
+
+function _mailing_action(action, email, successCallback, errorCallback) {
 	
-	vitalservice.callFunction('mailing.haley.signup', {email: email}, function(result) {
+	$.ajax({
+		url: 'https://portal-app.haley.ai/mailing/',
+		type: "POST",
+		data: JSON.stringify({action: action, email: email}),
+		contentType:"application/json; charset=utf-8",
+		dataType: "json"
+	}).done(function(data, textStatus, jqXHR) {
 		
-		console.log('haley.mailing.signup result: ', result)
-		
-		successCallback(result.status.message);
-		
-	}, function(error) {
-		
-		var status = 'error_unknown';
-		
-		var msg = 'no error message';
-		
-		if(error.indexOf('error_') == 0) {
-			
-			var split = error.split(/\s+/);
-			
-			status = split[0]
-			
-			if(split.length > 1) {
-				split.splice(0, 1);
-				msg = split.join(' ');
-			}
-			
+		console.log("mailing " + action + " response ", data);
+
+		if(data.ok) {
+			successCallback(data.message)
 		} else {
-			msg = error;
+			var error = data.message;
+			if(!error) error("unknown error");
+			errorCallback(null, error);
 		}
 		
-		errorCallback(status, msg);
+	}).fail(function() {
 		
+		console.error("mailing action " + action + " error ", arguments);
+		
+		var error = arguments[2];
+		if(!error) error = "unknown other error";
+		
+		errorCallback(null, error);
 	});
 	
 }
