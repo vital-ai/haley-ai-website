@@ -125,28 +125,29 @@ var context={
                     Within Haley, we've defined "Entities" and "Relationships" as dynamically defined knowledge objects that can be used within the service.  An "entity" is a "thing", and a "relationship" is a relationship between things.  As an example, an eCommerce store that sells shoes may want to define entities for "Shoes", "Brands", and "Category", with relationships for "makes" ("Nike" makes "Air Jordan") and "belongs-to" ("Air Jordan" belongs-to "BasketBallShoes").  Haley can then use these entities and relationships to recommend items to users.
                 </p>
                 
-                <h4><i>Apache Spark, MLlib</i></h4>
+                <h4><i>PyTorch</i></h4>
                 <p>
-                    Apache Spark is software that supports large-scale processing of data, and included with Apache Spark is the library <b>MLlib</b> for machine learning.  MLlib provides a number of machine learning algorithms to produce predictive models that can be used within Haley.  Apache Spark is part of our processing pipeline to produce new models using new data on an ongoing basis.
+                    PyTorch is a machine learning framework based on the Torch library, used for applications such as computer vision and natural language processing, originally developed by Meta AI and now part of the Linux Foundation umbrella. It is free and open-source software.
             
                 </p>
                 
-                <h4><i>Tensorflow, Keras</i></h4>
+                <h4><i>Tensorflow</i></h4>
                 <p>
-                    Tensforflow is an open-source library that can be used for Deep Learning and training of Neural Networks.  Keras is a library which provides convenient functions that make Tensorflow easier to use. We use these together to create Neural Networks to use within Haley for natural language processing, image recognition, and other predictive and recommendation tasks. 
-            
+                   TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks.  TensorFlow was developed by the Google Brain team for internal Google use in research and production.  The initial version was released under the Apache License 2.0
                 </p>
                 
-                <h4><i>Intel BigDL</i></h4>
+                <h4><i>Ludwig</i></h4>
                 <p>
-                    Intel BigDL is an open source deep learning library for Apache Spark.
-            
+                   Ludwig is a declarative machine learning framework that makes it easy to define machine learning pipelines using a simple and flexible data-driven configuration system. Ludwig is suitable for a wide variety of AI tasks, and is hosted by the Linux Foundation AI &amp; Data.
+
                 </p>
                 
                 
-                <h4><i>Recommendation Models</i></h4>
+                <h4><i>OpenAI GPT</i></h4>
                 <p>
-                    Recommendation models are used to recommend an item to a person, such as a movie to watch, a product to buy, or a news article to read.  Haley uses several algorithms for recommending items to users based on algorithms using collaborative filtering, probabilistic soft logic, reasoning, or neural networks.  
+                    Generative Pre-trained Transformer 3 (GPT-3) is an autoregressive language model that uses deep learning to produce human-like text. Given an initial text as prompt, it will produce text that continues the prompt.
+                    
+                    The architecture is a standard transformer network (with a few engineering tweaks) with the unprecedented size of 2048-token-long context and 175 billion parameters (requiring 800 GB of storage). The training method is "generative pretraining", meaning that it is trained to predict what the next token is. The model demonstrated strong few-shot learning on many text-based tasks. 
                 </p>
                 
                 <h4><i>Reasoning and Inference, Planning</i></h4>
@@ -166,16 +167,11 @@ var context={
                     Haley can utilize external sources of knowledge such as data provided by the customer (such as an inventory system) or from external providers.  WikiData provides a structured set of data derived from Wikipedia, and Google provides the KnowledgeGraph service, both of which can provide a depth of knowledge to Haley for many applications.
                 </p>
                 
-                <h4><i>External A.I. Services: Google, Amazon, IBM Watson</i></h4>
+                <h4><i>External A.I. Services: Google, Amazon, OpenAI, HuggingFace</i></h4>
                 <p>
-                    Haley can utilize externally provided A.I. services from providers such as Amazon, Google, and IBM.  Rather than re-implement the wheel, it's often quicker to utilize a service off-the-shelf as a starting point, and train a customized system once the value is proven.
+                    Haley can utilize externally provided A.I. services from providers such as Amazon, Google, OpenAI, and HuggingFace.  Rather than re-implement the wheel, it's often quicker to utilize a service off-the-shelf as a starting point, and train a customized system once the value is proven.
                 </p>
                 
-                
-                <h4><i>Kibana</i></h4>
-                <p>
-                    Kibana is a analytics and visualization tool which can be used with the Haley message stream to provide insight into Haley's activities.    
-                </p>
                       
             </div>
         </div>
