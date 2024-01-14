@@ -16,7 +16,6 @@
         <!-- end -->
         <link rel="stylesheet" href="common-files/css/animations.css">
         
-        <!-- If you don't use any of these blocks just remove unnecessary CSS files -->
         <!-- blog -->
         <link rel="stylesheet" href="ui-kit/ui-kit-blog/css/style.css">
         <!-- contacts -->
@@ -47,58 +46,50 @@
 
 </script>
 
-    </head>
+</head>
 
-    <body>
+<body>
         
-        <div class="page-wrapper">   
+<div class="page-wrapper">   
             
-    <script src="https:////code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https:////code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 <script type='text/javascript' src='js/templates.js'></script> 
 
-        <a name="home"></a>
+<a name="home"></a>
             
-
-       <div class="content-placeholder-1"></div>
+<div class="content-placeholder-1"></div>
     
 <script id="header">
 
 var theheader = JST['templates/header.hbs'];
     
-
 var context={
     vitalSiteURL: 'http://www.vital.ai',
     consoleURL: 'https://console.vital.ai'
 };
     
-  // Pass our data to the template
-  var theCompiledHtml = theheader(context);
+var theCompiledHtml = theheader(context);
     
-
-  // Add the compiled html to the page
-  var cp1 = $('.content-placeholder-1')
-  cp1.html(theCompiledHtml);
-  cp1.find('.logged-out-visible , .logged-in-visible').hide();
-
-  
+var cp1 = $('.content-placeholder-1')
+cp1.html(theCompiledHtml);
+cp1.find('.logged-out-visible , .logged-in-visible').hide();
   
 </script>            
             
 
-        <section class="header-1-sub" style="height: 0px; overflow: hidden;">
+<section class="header-1-sub" style="height: 0px; overflow: hidden;">
            
-            <div id="pt-main" class="page-transitions pt-perspective">
-            </div>
+<div id="pt-main" class="page-transitions pt-perspective">
+</div>
            
-        </section>
+</section>
         
-        <!-- fake section displayed underneath the floating nav bar when scroll-y=0 -->
-        <section style="height: 76px; overflow: hidden; background-color: rgb(54, 57, 64);">
-        </section>
-        
-            
+<!-- placeholder section displayed underneath the floating nav bar when scroll-y=0 -->
+<section style="height: 76px; overflow: hidden; background-color: rgb(54, 57, 64);">
+</section>
+                    
   <section class="content-1">
     <div class="container">
         <div class="row">
@@ -111,9 +102,6 @@ var context={
     </div>
 </section>            
 
-
-    
-  
 <section class="content-3">
     <div>
         <div class="container">
@@ -180,52 +168,39 @@ var context={
 
 var thefooter = JST['templates/footer.hbs'];
     
-
 var context={
     vitalSiteURL: 'http://www.vital.ai',
     consoleURL: 'https://console.vital.ai'
 };
- 
-           
-    
-  // Pass our data to the template
-  var theCompiledHtml = thefooter(context);
+     
+var theCompiledHtml = thefooter(context);
     
 
-  // Add the compiled html to the page
-  $('.content-placeholder-10').html(theCompiledHtml);
+$('.content-placeholder-10').html(theCompiledHtml);
 
 </script>  
 
-        </div>
+</div>
 
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="common-files/js/jquery-1.10.2.min.js"></script>
-        <script src="flat-ui/js/bootstrap.min.js"></script>
-        <script src="common-files/js/modernizr.custom.js"></script>
-        <script src="common-files/js/page-transitions.js"></script>
-        <script src="common-files/js/startup-kit.js"></script>
-
+<script src="common-files/js/jquery-1.10.2.min.js"></script>
+<script src="flat-ui/js/bootstrap.min.js"></script>
+<script src="common-files/js/modernizr.custom.js"></script>
+<script src="common-files/js/page-transitions.js"></script>
+<script src="common-files/js/startup-kit.js"></script>
 
 
-        <!-- autoslider -->
-        <script src="js/auto-slider.js" type="text/javascript"></script>
-
-        <!-- collapse the navbar -->
-        <script>
-          $(function(){
-            //deferred headre collapsing
-            setTimeout(function(){
-              $(window).trigger('collapse-header-1');
-              $(".navbar.col-sm-12.navbar-fixed-top").show();
-            }, 100);
-          });
-        </script>        
+<!-- collapse the navbar -->
+    <script>
+        $(function(){
+        //deferred headre collapsing
+        setTimeout(function(){
+             $(window).trigger('collapse-header-1');
+             $(".navbar.col-sm-12.navbar-fixed-top").show();
+        }, 100);
+        });
+    </script>        
         
-        <!-- autoslider -->
-        <!--<script src="js/auto-slider.js" type="text/javascript"></script>-->
         
-
 
     </body>
 </html>
